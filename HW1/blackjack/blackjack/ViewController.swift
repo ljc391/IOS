@@ -104,7 +104,8 @@ class ViewController: UIViewController {
     func endofgame() {
         sumplayer = 0
         counter = counter + 1
-        if counter > 5 {
+        if counter > 4 {
+            println("RESET!")
             counter = 1
             ex = [Int]()
             for k in 0..<52{
@@ -336,15 +337,20 @@ class ViewController: UIViewController {
                     Output.text = "You do not have enough money!"
                     
                     
+                } else if Input.text == "0"{
+                    Output.text = "Cannot input 0! \n Please input the money"
+                    
                 } else{
                     Output.text = "Please input the money"
                     bet.text = Input.text
                     money = money - imoney
                     left.text = String(money)
                     startnew()
-                    counter = 0
-                    
-                    
+                    //counter = 0
+                
+                
+                
+                
                 }
 
             
