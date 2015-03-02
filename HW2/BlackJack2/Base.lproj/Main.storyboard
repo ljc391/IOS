@@ -27,24 +27,40 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK5-Kn-b1G">
-                                <rect key="frame" x="157" y="369" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="157" y="369" width="30" height="30"/>
+                                <state key="normal" title="OK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="Confirm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bMX-E5-GS6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose deck of cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-5R-ZbW">
+                                <rect key="frame" x="123" y="231" width="169" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose how many players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ula-wZ-1Ng">
+                                <rect key="frame" x="123" y="144" width="203.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Rbv-qz-B5x" secondAttribute="centerX" constant="128.5" id="3qf-ir-gYY"/>
                             <constraint firstAttribute="centerY" secondItem="CpN-TC-vPA" secondAttribute="centerY" constant="97" id="3wW-QZ-IpJ"/>
+                            <constraint firstAttribute="centerX" secondItem="LXY-5R-ZbW" secondAttribute="centerX" constant="92.5" id="3wh-HL-6Vk"/>
                             <constraint firstItem="TK5-Kn-b1G" firstAttribute="top" secondItem="Rbv-qz-B5x" secondAttribute="bottom" constant="73" id="Cn9-Rs-usp"/>
                             <constraint firstItem="Rbv-qz-B5x" firstAttribute="top" secondItem="CpN-TC-vPA" secondAttribute="bottom" constant="50" id="Iw3-l6-uew"/>
+                            <constraint firstAttribute="centerX" secondItem="Ula-wZ-1Ng" secondAttribute="centerX" constant="75" id="UzB-DW-Wk0"/>
                             <constraint firstAttribute="centerY" secondItem="Rbv-qz-B5x" secondAttribute="centerY" constant="17" id="XMo-NZ-SyG"/>
                             <constraint firstAttribute="centerX" secondItem="TK5-Kn-b1G" secondAttribute="centerX" constant="103" id="iPI-zn-sE0"/>
                             <constraint firstAttribute="centerX" secondItem="CpN-TC-vPA" secondAttribute="centerX" constant="128.5" id="lEV-u4-Otb"/>
+                            <constraint firstAttribute="centerY" secondItem="LXY-5R-ZbW" secondAttribute="centerY" constant="58.5" id="wFe-zZ-18B"/>
+                            <constraint firstAttribute="centerY" secondItem="Ula-wZ-1Ng" secondAttribute="centerY" constant="145.5" id="wUS-TP-ilr"/>
                             <constraint firstAttribute="centerY" secondItem="TK5-Kn-b1G" secondAttribute="centerY" constant="-86" id="zv2-T9-9re"/>
                         </constraints>
                     </view>
