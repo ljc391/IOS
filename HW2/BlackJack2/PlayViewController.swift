@@ -117,18 +117,18 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
         s.append("Dealer: \(suit[adealer.suit[0]]) \(adealer.number[0])")  //\(suit[pa2[1]]) \(na2[1])
         Dcard1.image = GetImage(adealer.suit[0], n: adealer.number[0])
         Dcard2.image = GetImage(4,n: 0)
-        Dcard3.image = GetImage(4,n: 0)
-        Dcard4.image = GetImage(4,n: 0)
-        Dcard5.image = GetImage(4,n: 0)
+        //Dcard3.image = GetImage(4,n: 0)
+        //Dcard4.image = GetImage(4,n: 0)
+        //Dcard5.image = GetImage(4,n: 0)
         // s1 += s[0]
         for i in 0..<numofplayers {
             s.append("\n \(players[i].playername): \(suit[players[i].suit[0]]) \(players[i].number[0])  \(suit[players[i].suit[1]]) \(players[i].number[1])")
         }
         Pcards[0].image = GetImage(players[currentplayer].suit[0], n: players[currentplayer].number[0])
         Pcards[1].image = GetImage(players[currentplayer].suit[1], n: players[currentplayer].number[1])
-        Pcards[2].image = GetImage(4,n: 0)
-        Pcards[3].image = GetImage(4,n: 0)
-        Pcards[4].image = GetImage(4,n: 0)
+        //Pcards[2].image = GetImage(4,n: 0)
+        //Pcards[3].image = GetImage(4,n: 0)
+        //Pcards[4].image = GetImage(4,n: 0)
         for i in 0..<numofplayers+1{
             s2.append(s[i])
         }
@@ -183,10 +183,10 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
         }
         adealer.numberofcards = 2
         Dcard1.image = GetImage(adealer.suit[0], n: adealer.number[0])
-        Dcard2.image = GetImage(4,n: 0)
-        Dcard3.image = GetImage(4,n: 0)
-        Dcard4.image = GetImage(4,n: 0)
-        Dcard5.image = GetImage(4,n: 0)
+        Dcard2.hidden = true
+        Dcard3.hidden = true
+        Dcard4.hidden = true
+        Dcard5.hidden = true
         //Output.text = s1
         adealer.sum = countSum(adealer.number, size: adealer.numberofcards)
         //println(adealer.sum)
@@ -408,6 +408,7 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
         players[currentplayer].suit += [cardsuit]
         players[currentplayer].numberofcards++
         Pcards[currentcard+2].image = GetImage(players[currentplayer].suit[currentcard+2], n: players[currentplayer].number[currentcard+2])
+        Pcards[currentcard+2].hidden = false
         currentcard += 1
         for i in 0..<players[currentplayer].numberofcards {
             println(players[currentplayer].number[i])
@@ -465,9 +466,12 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
             Ibet.text = String(players[currentplayer].bet)
             Pcards[0].image = GetImage(players[currentplayer].suit[0], n: players[currentplayer].number[0])
             Pcards[1].image = GetImage(players[currentplayer].suit[1], n: players[currentplayer].number[1])
-            Pcards[2].image = GetImage(4, n: 0)
-            Pcards[3].image = GetImage(4, n: 0)
-            Pcards[4].image = GetImage(4, n: 0)
+            Pcards[2].hidden = true
+            Pcards[3].hidden = true
+            Pcards[4].hidden = true
+            //Pcards[2].image = GetImage(4, n: 0)
+            //Pcards[3].image = GetImage(4, n: 0)
+            //Pcards[4].image = GetImage(4, n: 0)
             
             
             
@@ -491,9 +495,12 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
             WorL.text = ""
             Pcards[0].image = GetImage(players[currentplayer].suit[0], n: players[currentplayer].number[0])
             Pcards[1].image = GetImage(players[currentplayer].suit[1], n: players[currentplayer].number[1])
-            Pcards[2].image = GetImage(4, n: 0)
-            Pcards[3].image = GetImage(4, n: 0)
-            Pcards[4].image = GetImage(4, n: 0)
+            Pcards[2].hidden = true
+            Pcards[3].hidden = true
+            Pcards[4].hidden = true
+            //Pcards[2].image = GetImage(4, n: 0)
+            //Pcards[3].image = GetImage(4, n: 0)
+            //Pcards[4].image = GetImage(4, n: 0)
 
         case 2:
             countdealer()
@@ -514,9 +521,12 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
                 Ibet.text = String(players[currentplayer].bet)
                 Pcards[0].image = GetImage(players[currentplayer].suit[0], n: players[currentplayer].number[0])
                 Pcards[1].image = GetImage(players[currentplayer].suit[1], n: players[currentplayer].number[1])
-                Pcards[2].image = GetImage(4, n: 0)
-                Pcards[3].image = GetImage(4, n: 0)
-                Pcards[4].image = GetImage(4, n: 0)
+                Pcards[2].hidden = true
+                Pcards[3].hidden = true
+                Pcards[4].hidden = true
+                //Pcards[2].image = GetImage(4, n: 0)
+                //Pcards[3].image = GetImage(4, n: 0)
+                //Pcards[4].image = GetImage(4, n: 0)
   
                 
             }
@@ -579,6 +589,7 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
         for i in 0..<adealer.numberofcards {
             println(adealer.number[i])
             Dcards[i].image = GetImage(adealer.suit[i], n: adealer.number[i])
+            Dcards[i].hidden = false
         
         }
         println(adealer.sum)
@@ -667,6 +678,10 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
             players[i].suit = [Int]()
             Pcards[i].image = GetImage(4,n: 0)
         }
+        Pcards[2].hidden = true
+        Pcards[3].hidden = true
+        Pcards[4].hidden = true
+        
         currentplayer = 0
         currentcard = 0
         counter++
