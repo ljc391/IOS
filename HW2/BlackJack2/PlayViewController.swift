@@ -84,11 +84,13 @@ class PlayViewController: UIViewController, UIActionSheetDelegate {
          if myActionSheet.buttonTitleAtIndex(buttonIndex) == "ALL IN" {
             players[currentplayer].bet = players[currentplayer].money
             Ibet.text = String(players[currentplayer].money)
+            Playernum.text = "\(players[currentplayer].playername)"
             players[currentplayer].money = 0
             Imoney.text = "0"
         } else {
             players[currentplayer].bet = myActionSheet.buttonTitleAtIndex(buttonIndex).toInt()!
             Ibet.text = myActionSheet.buttonTitleAtIndex(buttonIndex)
+            Playernum.text = "\(players[currentplayer].playername)"
             players[currentplayer].money = players[currentplayer].money - players[currentplayer].bet
             Imoney.text = String(players[currentplayer].money)
         }
