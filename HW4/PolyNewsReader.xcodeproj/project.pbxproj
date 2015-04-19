@@ -45,6 +45,7 @@
 		0B6DC26F1AD4A24400748E1D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DC26E1AD4A24400748E1D /* NewsTableViewController.swift */; };
 		0B6DC2711AD4A9FB00748E1D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DC2701AD4A9FB00748E1D /* DetailViewController.swift */; };
 		4ED86C32E11E7D4BDC125765 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D416D4B8B401E55700ED8F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B9EEDAB01AE2F473005B9EB9 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EEDAAF1AE2F473005B9EB9 /* CustomTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		0B6DC2701AD4A9FB00748E1D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		55D416D4B8B401E55700ED8F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		848294AA0963D4A6A579FB90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B9EEDAAF1AE2F473005B9EB9 /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 		E576CBF2DB157206F7912A8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			children = (
 				0B6DC2321AD4986400748E1D /* Spring */,
 				0B6DC2121AD48D5B00748E1D /* AppDelegate.swift */,
+				B9EEDAAF1AE2F473005B9EB9 /* CustomTableCell.swift */,
 				0B6DC2141AD48D5B00748E1D /* ViewController.swift */,
 				0B6DC26E1AD4A24400748E1D /* NewsTableViewController.swift */,
 				0B6DC2701AD4A9FB00748E1D /* DetailViewController.swift */,
@@ -411,6 +414,7 @@
 				0B6DC2591AD4986400748E1D /* DesignableTextField.swift in Sources */,
 				0B6DC2511AD4986400748E1D /* AsyncButton.swift in Sources */,
 				0B6DC25E1AD4986400748E1D /* KeyboardLayoutConstraint.swift in Sources */,
+				B9EEDAB01AE2F473005B9EB9 /* CustomTableCell.swift in Sources */,
 				0B6DC2711AD4A9FB00748E1D /* DetailViewController.swift in Sources */,
 				0B6DC2651AD4986400748E1D /* SpringButton.swift in Sources */,
 				0B6DC2521AD4986400748E1D /* AsyncImageView.swift in Sources */,

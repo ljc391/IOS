@@ -13,6 +13,13 @@ class DetailViewController: UIViewController {
     var titleItem:AnyObject?
     var imageItem:AnyObject?
     
+    @IBAction func background(sender: AnyObject) {
+        self
+        
+        
+        
+    }
+    @IBOutlet weak var Bg: UIButton!
     @IBOutlet weak var LabelTitle: UILabel!
     @IBOutlet weak var ImageP: UIImageView!
     @IBOutlet weak var LabelDetail: UILabel!
@@ -20,11 +27,15 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // self.navigationItem.rightBarButtonItem = self.
+ //self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+       
     }
     override func viewDidAppear(animated: Bool) {
         if let detail:AnyObject = self.detailItem{

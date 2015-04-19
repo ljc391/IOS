@@ -3,7 +3,7 @@
 //  PolyNewsReader
 //
 //  Created by Ardis Kadiu on 4/7/15.
-//  Copyright (c) 2015 Spark451. All rights reserved.
+//  Copyright (c) 2015 Spark451. All rights reserved. 
 //
 
 import UIKit
@@ -23,6 +23,7 @@ class NewsTableViewController: UITableViewController {
                 //println(request)
                 //println(response)
                 //println(error)
+                
                 
                 self.json = JSON(data!)
                 
@@ -69,34 +70,26 @@ class NewsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        var cell:CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("cell2", forIndexPath: indexPath) as CustomTableViewCell
         
         let title = json[indexPath.row]["title"].string!
         let img = json[indexPath.row]["image"].string ?? ""
         let teaser = json[indexPath.row]["teaser"].string!
         
-        cell.textLabel?.text = title
-        cell.detailTextLabel?.text = teaser
-      
+        cell.title?.text = title
+        //cell.detailTextLabel?.text = teaser
+        cell.detailTextLabel?.text = ""
+        //cell.titleimage?.frame = CGRectMake(0, 0, 50, 50);
         
+        //cell.imageView?.center = imageView.superview.center
         let url = NSURL(string: img)
         if  let data = NSData(contentsOfURL: url!) {
-            cell.imageView?.image = UIImage(data: data)
+            cell.titleimage?.image = UIImage(data: data)
         }
 
        // cell.textLabel.text = transportItems[indexPath.row]
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
         return cell
     }
     
@@ -169,12 +162,7 @@ class NewsTableViewController: UITableViewController {
                 let object3 = json[indexPath.row]["title"].string!
                 (segue.destinationViewController as DetailViewController).titleItem = object3
 
-                
-                
-                
-                
-                
-                
+                            
             }
             
         }
