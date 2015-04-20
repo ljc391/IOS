@@ -7,14 +7,53 @@
 //
 
 import UIKit
+import Social
 
 class DetailViewController: UIViewController {
     var detailItem:AnyObject?
     var titleItem:AnyObject?
     var imageItem:AnyObject?
+    var count:Int = 0
     
+    @IBAction func shareButton(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookSheet.setInitialText(LabelTitle.text! + "\n" + LabelDetail.text!)
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+            
+          /*  var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookSheet.setInitialText("Share on Facebook")
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+           */
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+    }
     @IBAction func background(sender: AnyObject) {
-        self
+        count += 1
+        if count % 2 == 1{
+            self.view.backgroundColor = UIColor.blackColor()
+            LabelTitle.textColor = UIColor.whiteColor()
+            LabelDetail.textColor = UIColor.whiteColor()
+        }
+        else{
+            self.view.backgroundColor = UIColor.whiteColor()
+            LabelTitle.textColor = UIColor.blackColor()
+            LabelDetail.textColor = UIColor.blackColor()
+        }
+        
+        
         
         
         

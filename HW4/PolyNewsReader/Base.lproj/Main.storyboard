@@ -111,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="detailimage" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-Y6-xyP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="detailimage" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-Y6-xyP">
                                 <rect key="frame" x="16" y="152" width="343" height="223"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="UFQ-rg-tn4"/>
@@ -130,7 +130,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqx-CR-Ou3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqx-CR-Ou3">
                                 <rect key="frame" x="23" y="391" width="329" height="276"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="hlG-6Z-ZNS"/>
@@ -149,7 +149,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsG-We-pwJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsG-We-pwJ">
                                 <rect key="frame" x="13" y="72" width="349" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="cTe-bL-wHT"/>
@@ -221,7 +221,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="YzM-rR-Cbx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zZQ-Zc-NIT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zZQ-Zc-NIT">
+                            <connections>
+                                <action selector="shareButton:" destination="if1-Eh-Yxi" id="IA8-Gf-a0W"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
